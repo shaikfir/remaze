@@ -32,7 +32,7 @@ setInterval(function(){
     grid.setState({mazeData: nextState});
     grid.render();
   }
-}, 300)
+}, 200)
 
 
 solve(1, 1, MAZE, [], callBack);
