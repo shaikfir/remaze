@@ -1,6 +1,13 @@
 import React from 'react';
 import _ from 'lodash';
 
+
+var cssMap = {
+  'X': 'cell blocked',
+  '1': 'cell exit',
+  'o': 'cell visited',
+  'default': 'cell'
+}
 export default class Grid extends React.Component {
 
    getAppState() {
@@ -22,17 +29,8 @@ export default class Grid extends React.Component {
     return (
       <div className='container'>
       {this.state.mazeData.map(function(val, i){
-          if(val==='X'){
-            cellClass='cell blocked';
-          } else if(val==='1'){
-            cellClass='cell exit';
-          }
-          else if(val==='o'){
-            cellClass='cell visited';
-          } else {
-            cellClass='cell';
-          }
-          return <div key={idx++} className={cellClass} style={cellStyle}>{idx}</div>;
+        cellClass = cssMap[val] || cssMap['default'];
+        return <div key={idx++} className={cellClass} style={cellStyle}>{idx}</div>;
       }, this)}
       </div>
     );
