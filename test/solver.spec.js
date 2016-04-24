@@ -135,7 +135,7 @@ describe("Solve", function() {
 
   describe("Solve maze 5a", function() {
     it("Solves maze 5a", function() {
-      expect(solve(5, 5, maze5a, [])).to.equal(true);
+      expect(solve(4, 5, maze5a, [])).to.equal(true);
     });
   });
 

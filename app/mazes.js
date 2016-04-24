@@ -37,6 +37,15 @@ const mazes = [
     'XXXXXXXXXXXXXXXXXXXX'
   ],
   [
+    'XXXXXX',
+    'X1   X',
+    'XXXX X',
+    'X    X',
+    'X XXXX',
+    'X    X',
+    'XXXXXX'
+  ],
+  [
     'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
     'X X                                     X',
     'X X      XXXXXXXXXXXXXXXXXXXXXXXX       X',

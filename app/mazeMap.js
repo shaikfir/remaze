@@ -42,6 +42,10 @@ var MazeMap = {
     return !!_.find(visited, getPointStr(x,y));
   },
 
+  isLegalMove(x, y, map, visited){
+      return this.canMoveTo(x, y, map) && !this.isVisited(x, y, visited);
+  },
+
   parseMaze: function(maze){
     var data = [];
     var h = maze.length;

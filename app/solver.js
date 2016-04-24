@@ -3,6 +3,10 @@ import _ from 'lodash';
 
 
 export function solve(x, y, map, visited, callBack) {
+  if (!mazeMap.isLegalMove(x, y, map, visited)){
+    return false;
+  }
+
   if (callBack) {
     callBack(map, visited);
   }
@@ -12,28 +16,20 @@ export function solve(x, y, map, visited, callBack) {
   }
   mazeMap.markVisited(x, y, visited);
 
-  if (!mazeMap.isVisited(x+1, y, visited) &&  mazeMap.canMoveTo(x+1, y, map)) {
-    if (solve(x+1, y, map, _.clone(visited), callBack)) {
-      return true;
-    }
+  if (solve(x+1, y, map, _.clone(visited), callBack)) {
+    return true;
   }
 
-  if (!mazeMap.isVisited(x-1, y, visited) &&  mazeMap.canMoveTo(x-1, y, map)) {
-    if (solve(x-1, y, map, _.clone(visited), callBack)) {
-      return true;
-    }
+  if (solve(x-1, y, map, _.clone(visited), callBack)) {
+    return true;
   }
 
-  if (!mazeMap.isVisited(x, y+1, visited) &&  mazeMap.canMoveTo(x, y+1, map)) {
-    if (solve(x, y+1, map, _.clone(visited), callBack)) {
-      return true;
-    }
+  if (solve(x, y+1, map, _.clone(visited), callBack)) {
+    return true;
   }
 
-  if (!mazeMap.isVisited(x, y-1, visited) &&  mazeMap.canMoveTo(x, y-1, map)) {
-    if (solve(x, y-1, map, _.clone(visited), callBack)) {
-      return true;
-    }
+  if (solve(x, y-1, map, _.clone(visited), callBack)) {
+    return true;
   }
 
   return false;
