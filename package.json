@@ -1,7 +1,7 @@
 {
   "name": "reactMazeSolver",
   "version": "4.0.0",
-  "description": "Boilerplate for kick starting a React Project with ES6 (Babel) and Hot reloader using Webpack.",
+  "description": "Reacr/ES6/WebPack Maze Solver",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
