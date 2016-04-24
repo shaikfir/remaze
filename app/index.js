@@ -6,8 +6,9 @@ import mazeMap from './mazeMap';
 import Grid from './grid';
 import {solve} from './solver';
 
+var MAZE = mazes[1];
 
-var mazeData = mazeMap.parseMaze(mazes.maze1);
+var mazeData = mazeMap.parseMaze(MAZE);
 // var mazeData = mazeMap.parseMaze(maze1);
 var grid = render(
   <Grid w={mazeData.w} h={mazeData.h} initialData={mazeData.data}/>,
@@ -17,7 +18,7 @@ var grid = render(
 var actions = [];
 
 function callBack(map, visited){
-  let maze = _.clone(mazes.maze1);
+  let maze = _.clone(MAZE);
   _(visited).forEach(function(pos) {
     mazeMap.set(pos.x, pos.y, maze, 'o');
   });
@@ -33,4 +34,5 @@ setInterval(function(){
   }
 }, 300)
 
-solve(1, 1, mazes.maze1, [], callBack);
+
+solve(1, 1, MAZE, [], callBack);
