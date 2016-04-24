@@ -19,6 +19,14 @@ describe("Maze", function() {
     });
   });
 
+  describe("Maze.set", function() {
+    it("should set a value", function() {
+      let mazeClone = mazeMap.set(2, 2, maze, mazeMap.VISITED);
+      expect(mazeMap.get(2, 2, mazeClone)).to.equal(mazeMap.VISITED);
+    });
+  });
+
+
   describe("Maze.isVisited, Maze.markVisited", function() {
     var visited=[];
     it("marks and returns visited", function() {

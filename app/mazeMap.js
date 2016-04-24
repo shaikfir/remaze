@@ -4,16 +4,28 @@ function getPointStr(x,y) {
   return {x :x, y:y};
 }
 
+function replaceAt(str, index, character) {
+    return str.substr(0, index) + character + str.substr(index+character.length);
+}
+
 var MazeMap = {
   BLOCKED: 'X',
   FREE: ' ',
   EXIT: '1',
+  VISITED: 'o',
 
   get: function(x, y, map) {
     if (y<0 || x<0 || y >= map.length || x>=map[y].length){
       return this.BLOCKED;
     }
     return map[y].charAt(x);
+  },
+
+  set: function(x, y, map, val){
+    if (y<0 || x<0 || y >= map.length || x>=map[y].length){
+      return undefined;
+    }
+    map[y] = replaceAt(map[y], x, val);
   },
 
   canMoveTo: function(x, y, map){
