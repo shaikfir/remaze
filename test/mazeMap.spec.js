@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import {expect} from 'chai';
 import mazeMap from '../app/mazeMap';
 
@@ -21,7 +22,8 @@ describe("Maze", function() {
 
   describe("Maze.set", function() {
     it("should set a value", function() {
-      let mazeClone = mazeMap.set(2, 2, maze, mazeMap.VISITED);
+      let mazeClone = _.clone(maze);
+      mazeMap.set(2, 2, mazeClone, mazeMap.VISITED);
       expect(mazeMap.get(2, 2, mazeClone)).to.equal(mazeMap.VISITED);
     });
   });
