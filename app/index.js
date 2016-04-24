@@ -6,7 +6,7 @@ import mazeMap from './mazeMap';
 import Grid from './grid';
 import {solve} from './solver';
 
-var MAZE = mazes[2];
+var MAZE = mazes[1];
 
 var mazeData = mazeMap.parseMaze(MAZE);
 // var mazeData = mazeMap.parseMaze(maze1);
