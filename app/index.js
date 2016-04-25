@@ -6,7 +6,10 @@ import mazeMap from './mazeMap';
 import Grid from './grid';
 import {solve} from './solver';
 
-var MAZE = mazes[2];
+const CONFIG = {
+  MAZE: mazes[2],
+  INTERVAL: 200;
+}
 
 var mazeData = mazeMap.parseMaze(MAZE);
 // var mazeData = mazeMap.parseMaze(maze1);
@@ -18,7 +21,7 @@ var grid = render(
 var actions = [];
 
 function callBack(map, visited){
-  let maze = _.clone(MAZE);
+  let maze = _.clone(CONFIG.MAZE);
   _(visited).forEach(function(pos) {
     mazeMap.set(pos.x, pos.y, maze, 'o');
   });
@@ -32,7 +35,7 @@ setInterval(function(){
     grid.setState({mazeData: nextState});
     grid.render();
   }
-}, 200)
+}, CONFIG.INTERVAL)
 
 
 solve(1, 1, MAZE, [], callBack);
