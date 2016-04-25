@@ -1,7 +1,7 @@
 {
   "name": "reactMazeSolver",
   "version": "4.0.0",
-  "description": "Reacr/ES6/WebPack Maze Solver",
+  "description": "React/ES6/WebPack Maze Solver",
   "main": "index.js",
   "scripts": {
     "start": "node server.js",
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/vasanthk/react-es6-webpack-boilerplate.git"
+    "url": "https://github.com/shaikfir/remaze.git"
   },
   "keywords": [
     "react",
