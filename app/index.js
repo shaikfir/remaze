@@ -8,10 +8,10 @@ import {solve} from './solver';
 
 const CONFIG = {
   MAZE: mazes[2],
-  INTERVAL: 200;
+  INTERVAL: 200
 }
 
-var mazeData = mazeMap.parseMaze(MAZE);
+var mazeData = mazeMap.parseMaze(CONFIG.MAZE);
 // var mazeData = mazeMap.parseMaze(maze1);
 var grid = render(
   <Grid w={mazeData.w} h={mazeData.h} initialData={mazeData.data}/>,
@@ -38,4 +38,4 @@ setInterval(function(){
 }, CONFIG.INTERVAL)
 
 
-solve(1, 1, MAZE, [], callBack);
+solve(1, 1, CONFIG.MAZE, [], callBack);
