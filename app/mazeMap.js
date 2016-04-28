@@ -1,8 +1,5 @@
 import _ from 'lodash';
 
-function getPointStr(x, y) {
-  return {x: x, y: y};
-}
 
 function replaceAt(str, index, character) {
     return str.substr(0, index) + character + str.substr(index + character.length);
@@ -13,6 +10,10 @@ let MazeMap = {
   FREE: ' ',
   EXIT: '1',
   VISITED: 'o',
+
+  getPointObj: function (x, y) {
+    return {x: x, y: y};
+  },
 
   get: function (x, y, map) {
     if (y < 0 || x < 0 || y >= map.length || x >= map[y].length){
@@ -34,12 +35,12 @@ let MazeMap = {
   },
 
   markVisited: function (x, y, visited){
-    visited.push(getPointStr(x, y));
+    visited.push(this.getPointObj(x, y));
 
   },
 
   isVisited: function (x, y, visited){
-    return !!_.find(visited, getPointStr(x, y));
+    return !!_.find(visited, this.getPointObj(x, y));
   },
 
   isLegalMove(x, y, map, visited){

@@ -5,10 +5,10 @@ import _ from 'lodash';
 import mazes from './mazes';
 import mazeMap from './mazeMap';
 import Grid from './grid';
-import {solve} from './solver';
+import {solve} from './itsolver';
 
 const CONFIG = {
-  MAZE: mazes[2],
+  MAZE: mazes[4],
   INTERVAL: 200
 };
 
