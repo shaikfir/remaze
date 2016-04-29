@@ -10,6 +10,7 @@ let MazeMap = {
   FREE: ' ',
   EXIT: '1',
   VISITED: 'o',
+  DEAD: '+',
 
   getPointObj: function (x, y) {
     return {x: x, y: y};
@@ -36,11 +37,18 @@ let MazeMap = {
 
   markVisited: function (x, y, visited){
     visited.push(this.getPointObj(x, y));
-
   },
 
   isVisited: function (x, y, visited){
     return !!_.find(visited, this.getPointObj(x, y));
+  },
+
+  removeFromVisited: function (x, y, visited){
+    let ind = _.findIndex(visited, this.getPointObj(x, y));
+    if(ind >= 0) {
+      visited.splice(ind, 1);
+    }
+    return visited;
   },
 
   isLegalMove(x, y, map, visited){

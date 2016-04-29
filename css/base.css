@@ -28,3 +28,8 @@ body {
   background: green;
   border-radius: 49%;
 }
+
+.container > .cell.dead {
+  background: #CCCCCC;
+  border-radius: 49%;
+}

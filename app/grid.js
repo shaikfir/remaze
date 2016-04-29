@@ -6,6 +6,7 @@ let cssMap = {
   'X': 'cell blocked',
   '1': 'cell exit',
   'o': 'cell visited',
+  '+': 'cell dead',
   'default': 'cell'
 };
 

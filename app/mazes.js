@@ -1,6 +1,7 @@
 
 const mazes = [
   [
+    // maze 0
     'XXXXXXXXXXXXXXXXXXXX',
     'X                  X',
     'X  XXXX  XXXXXXXXXXX',
@@ -13,6 +14,7 @@ const mazes = [
     'XXXXXXXXXXXXXXXXXXXX'
   ],
   [
+    // maze 1
     'XXXXXXXXXXXXXXXXXXXX',
     'X                  X',
     'X  XXXX  XXXXXXXXXXX',
@@ -25,6 +27,7 @@ const mazes = [
     'XXXXXXXXXXXXXXXXXXXX'
   ],
   [
+    // maze 2
     'XXXXXXXXXXXXXXXXXXXX',
     'X      X     X     X',
     'XXXX   X     X  X  X',
@@ -40,12 +43,21 @@ const mazes = [
     'XXXXXXXXXXXXXXXXXXXX'
   ],
   [
+    // maze 3
     'XXXXXX',
     'X1   X',
     'XXXX X',
     'X    X',
     'X XXXX',
     'X    X',
+    'XXXXXX'
+  ],
+  [
+    // maze 4
+    'XXXXXX',
+    'X    X',
+    'X    X',
+    'X   1X',
     'XXXXXX'
   ],
   [
@@ -90,7 +102,7 @@ const mazes = [
     'X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX   X  X  X  X  X  X  X  X  X  X  X    X',
     'X X                                         X     X     X     X     X     X    X',
     'X X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX X',
-    'X X                                         X                                X X',
+    'X X                                                                          X X',
     'X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX X X',
     'X X                                                                          X X',
     'X X XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX X',
