@@ -11,6 +11,7 @@ let MazeMap = {
   EXIT: '1',
   VISITED: 'o',
   DEAD: '+',
+  WIN: '*',
 
   getPointObj: function (x, y) {
     return {x: x, y: y};

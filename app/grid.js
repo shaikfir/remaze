@@ -7,6 +7,7 @@ let cssMap = {
   '1': 'cell exit',
   'o': 'cell visited',
   '+': 'cell dead',
+  '*': 'cell win',
   'default': 'cell'
 };
 

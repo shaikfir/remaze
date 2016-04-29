@@ -61,6 +61,7 @@ const mazes = [
     'XXXXXX'
   ],
   [
+    // maze 5
     'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
     'X X                                     X',
     'X X      XXXXXXXXXXXXXXXXXXXXXXXX       X',
@@ -82,6 +83,7 @@ const mazes = [
     'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX'
   ],
   [
+    // maze 6
     'XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX',
     'X X                                     X      X     X     X     X     X       X',
     'X X      XXXXXXXXXXXXXXXXXXXXXXXX       X   X  X  X  X  X  X  X  X  X  X  X    X',

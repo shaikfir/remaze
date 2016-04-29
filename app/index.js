@@ -8,7 +8,7 @@ import Grid from './grid';
 import {solve} from './itsolver';
 
 const CONFIG = {
-  MAZE: mazes[4],
+  MAZE: mazes[5],
   INTERVAL: 200
 };
 
@@ -22,7 +22,7 @@ let grid = render(
 let actions = [];
 
 function callBack(map, visited){
-  let maze = _.clone(CONFIG.MAZE);
+  let maze = _.clone(map);
   _(visited).forEach(function (pos) {
     mazeMap.set(pos.x, pos.y, maze, 'o');
   });

@@ -33,3 +33,8 @@ body {
   background: #CCCCCC;
   border-radius: 49%;
 }
+
+.container > .cell.win {
+  background: blue;
+  border-radius: 49%;
+}
